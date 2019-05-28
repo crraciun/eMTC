@@ -1,0 +1,24 @@
+Reading configuration file ue.conf...
+
+Built in Release mode using commit 83ed3ae on branch master.
+
+---  Software Radio Systems LTE UE  ---
+
+Opening RF device with 1 RX antennas...
+Opening USRP with args: type=b200,master_clock_rate=30.72e6
+Waiting PHY to initialize...
+...
+Attaching UE...
+Searching cell in DL EARFCN=3400, f_dl=2685.0 MHz, f_ul=2565.0 MHz
+.
+Found Cell:  PCI=1, PRB=25, Ports=1, CFO=-2.5 KHz
+Found PLMN:  Id=90170, TAC=7
+Could not find Home PLMN Id=00101, trying to connect to PLMN Id=90170
+Random Access Transmission: seq=7, ra-rnti=0x2
+RRC Connected
+Random Access Complete.     c-rnti=0x46, ta=1
+Warning: Network authentication failure
+Failed to Attach
+Received RRC Connection Release
+RRC IDLE
+Closing stdin thread.

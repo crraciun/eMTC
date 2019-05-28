@@ -1,0 +1,87 @@
+-- CMAKE_SYSTEM: Linux-4.15.0-47-generic
+-- CMAKE_SYSTEM_PROCESSOR: x86_64
+-- CMAKE_CXX_COMPILER: /usr/bin/c++
+-- Build type not specified: defaulting to Release.
+-- Could NOT find mkl (missing: MKL_LIBRARIES MKL_CORE MKL_ILP MKL_SEQ) 
+-- FFTW3F LIBRARIES: /usr/lib/x86_64-linux-gnu/libfftw3f.so
+-- FFTW3F STATIC LIBRARIES: /usr/lib/x86_64-linux-gnu/libfftw3f.a
+-- FFTW3F INCLUDE DIRS: /usr/include
+-- FFT_LIBRARIES: /usr/lib/x86_64-linux-gnu/libfftw3f.so
+-- Checking for module 'polarssl'
+--   No package 'polarssl' found
+-- POLARSSL LIBRARIES: POLARSSL_LIBRARIES-NOTFOUND
+-- POLARSSL STATIC LIBRARIES: POLARSSL_STATIC_LIBRARIES-NOTFOUND
+-- POLARSSL INCLUDE DIRS: POLARSSL_INCLUDE_DIRS-NOTFOUND
+-- Could NOT find POLARSSL (missing: POLARSSL_LIBRARIES POLARSSL_INCLUDE_DIRS) 
+-- Checking for module 'mbedtls'
+--   No package 'mbedtls' found
+-- MBEDTLS LIBRARIES: /usr/lib/x86_64-linux-gnu/libmbedcrypto.so
+-- MBEDTLS STATIC LIBRARIES: /usr/lib/x86_64-linux-gnu/libmbedcrypto.a
+-- MBEDTLS INCLUDE DIRS: /usr/include
+-- Checking for module 'libpcsclite'
+--   No package 'libpcsclite' found
+-- Could NOT find PCSCLITE (missing: PCSCLITE_LIBRARY PCSCLITE_INCLUDE_DIR) 
+-- PCSC LIBRARIES: PCSCLITE_LIBRARY-NOTFOUND
+-- PCSC INCLUDE DIRS: PCSCLITE_INCLUDE_DIR-NOTFOUND
+-- UHD LIBRARIES /usr/lib/x86_64-linux-gnu/libuhd.so
+-- UHD INCLUDE DIRS /usr/include
+-- Checking for module 'libbladeRF'
+--   No package 'libbladeRF' found
+-- libbladeRF not found.
+-- FINDING SOAPY.
+-- Checking for module 'SoapySDR'
+--   No package 'SoapySDR' found
+-- libSOAPYSDR not found.
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   program_options
+-- SRSGUI LIBRARIES SRSGUI_LIBRARIES-NOTFOUND
+-- SRSGUI INCLUDE DIRS SRSGUI_INCLUDE_DIRS-NOTFOUND
+-- Could NOT find SRSGUI (missing: SRSGUI_LIBRARIES SRSGUI_INCLUDE_DIRS) 
+-- SSE4.1 is enabled - target CPU must support it
+-- AVX is enabled - target CPU must support it
+-- AVX2 is enabled - target CPU must support it
+-- FMA is enabled - target CPU must support it
+-- SSE4.1 is enabled - target CPU must support it
+-- AVX is enabled - target CPU must support it
+-- AVX2 is enabled - target CPU must support it
+-- FMA is enabled - target CPU must support it
+-- CMAKE_C_FLAGS is  -march=native -Wall -Wno-comment -Wno-write-strings -Winline -Wno-unused-result -Wformat -Wmissing-field-initializers -Wtype-limits -std=c99 -D_GNU_SOURCE -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -mfma -DLV_HAVE_FMA -Ofast -funroll-loops
+-- CMAKE_CXX_FLAGS is  -march=native -Wall -Wno-comment -Wno-reorder -Wno-unused-but-set-variable -Wno-unused-variable -Wformat -Wmissing-field-initializers -Wtype-limits -std=c++03 -mfpmath=sse -mavx2 -DLV_HAVE_AVX2 -DLV_HAVE_AVX -DLV_HAVE_SSE -O3 -fno-trapping-math -fno-math-errno -DBUILD_TYPE_RELEASE
+-- clang-tidy not found.
+-- Using install prefix: /usr/local
+-- Building for version: 18.9.0
+-- SRSGUI LIBRARIES SRSGUI_LIBRARIES-NOTFOUND
+-- SRSGUI INCLUDE DIRS SRSGUI_INCLUDE_DIRS-NOTFOUND
+-- Could NOT find SRSGUI (missing: SRSGUI_LIBRARIES SRSGUI_INCLUDE_DIRS) 
+-- SRSGUI LIBRARIES SRSGUI_LIBRARIES-NOTFOUND
+-- SRSGUI INCLUDE DIRS SRSGUI_INCLUDE_DIRS-NOTFOUND
+-- Could NOT find SRSGUI (missing: SRSGUI_LIBRARIES SRSGUI_INCLUDE_DIRS) 
+--    examples will be installed.
+-- No post-build command defined
+-- Building with srsUE
+-- No post-build-UE command defined
+-- No post-build command defined
+-- Building with srsENB
+-- Found LibConfig++: /usr/lib/x86_64-linux-gnu/libconfig++.so
+-- static LibConfig++ path: /usr/lib/x86_64-linux-gnu/libconfig++.a
+-- Found LibConfig: /usr/lib/x86_64-linux-gnu/libconfig.so
+-- static LibConfig path: /usr/lib/x86_64-linux-gnu/libconfig.a
+-- Checking for module 'sctp'
+--   No package 'sctp' found
+-- SCTP LIBRARIES: /usr/lib/x86_64-linux-gnu/libsctp.so
+-- SCTP INCLUDE DIRS: /usr/include
+-- No post-build-ENB command defined
+-- Building with srsEPC
+-- Found LibConfig++: /usr/lib/x86_64-linux-gnu/libconfig++.so
+-- static LibConfig++ path: /usr/lib/x86_64-linux-gnu/libconfig++.a
+-- Found LibConfig: /usr/lib/x86_64-linux-gnu/libconfig.so
+-- static LibConfig path: /usr/lib/x86_64-linux-gnu/libconfig.a
+-- Checking for module 'sctp'
+--   No package 'sctp' found
+-- SCTP LIBRARIES: /usr/lib/x86_64-linux-gnu/libsctp.so
+-- SCTP INCLUDE DIRS: /usr/include
+-- No post-build-EPC command defined
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/cigarier/Desktop/srsLTE/build

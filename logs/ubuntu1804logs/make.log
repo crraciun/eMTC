@@ -1,0 +1,602 @@
+Scanning dependencies of target srslte_asn1
+[  0%] Building CXX object lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_common.cc.o
+[  1%] Building CXX object lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_rrc.cc.o
+[  1%] Building CXX object lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_mme.cc.o
+[  1%] Building CXX object lib/src/asn1/CMakeFiles/srslte_asn1.dir/liblte_s1ap.cc.o
+[  2%] Building CXX object lib/src/asn1/CMakeFiles/srslte_asn1.dir/gtpc.cc.o
+[  2%] Linking CXX static library libsrslte_asn1.a
+[  2%] Built target srslte_asn1
+Scanning dependencies of target gen_build_info
+-- Generating build_info.h
+[  2%] Built target gen_build_info
+Scanning dependencies of target srslte_common
+[  2%] Building C object lib/src/common/CMakeFiles/srslte_common.dir/crash_handler.c.o
+[  2%] Building C object lib/src/common/CMakeFiles/srslte_common.dir/gen_mch_tables.c.o
+[  3%] Building C object lib/src/common/CMakeFiles/srslte_common.dir/threads.c.o
+[  3%] Building C object lib/src/common/CMakeFiles/srslte_common.dir/version.c.o
+[  3%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/buffer_pool.cc.o
+[  4%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/liblte_security.cc.o
+[  4%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/log_filter.cc.o
+[  4%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/logger_file.cc.o
+[  4%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/mac_pcap.cc.o
+[  5%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/nas_pcap.cc.o
+[  5%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/pdu.cc.o
+[  5%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/pdu_queue.cc.o
+[  6%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/rlc_pcap.cc.o
+[  6%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/s1ap_pcap.cc.o
+[  6%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/security.cc.o
+/home/cigarier/Desktop/srsLTE/lib/src/common/security.cc: In function ‘uint8_t srslte::security_md5(const uint8_t*, size_t, uint8_t*)’:
+/home/cigarier/Desktop/srsLTE/lib/src/common/security.cc:180:33: warning: ‘void mbedtls_md5(const unsigned char*, size_t, unsigned char*)’ is deprecated [-Wdeprecated-declarations]
+   mbedtls_md5(input, len, output);
+                                 ^
+In file included from /home/cigarier/Desktop/srsLTE/lib/src/common/security.cc:33:0:
+/usr/include/mbedtls/md5.h:291:25: note: declared here
+ MBEDTLS_DEPRECATED void mbedtls_md5( const unsigned char *input,
+                         ^~~~~~~~~~~
+[  6%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/snow_3g.cc.o
+[  7%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/task_dispatcher.cc.o
+[  7%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/thread_pool.cc.o
+[  7%] Building CXX object lib/src/common/CMakeFiles/srslte_common.dir/tti_sync_cv.cc.o
+[  7%] Linking CXX static library libsrslte_common.a
+[  7%] Built target srslte_common
+Scanning dependencies of target srslte_enb
+[  8%] Building C object lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_dl.c.o
+[  8%] Building C object lib/src/phy/enb/CMakeFiles/srslte_enb.dir/enb_ul.c.o
+[  8%] Built target srslte_enb
+Scanning dependencies of target srslte_agc
+[  8%] Building C object lib/src/phy/agc/CMakeFiles/srslte_agc.dir/agc.c.o
+[  8%] Built target srslte_agc
+Scanning dependencies of target srslte_ch_estimation
+[  8%] Building C object lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_common.c.o
+[  9%] Building C object lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_dl.c.o
+[  9%] Building C object lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/chest_ul.c.o
+[  9%] Building C object lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_dl.c.o
+[  9%] Building C object lib/src/phy/ch_estimation/CMakeFiles/srslte_ch_estimation.dir/refsignal_ul.c.o
+[  9%] Built target srslte_ch_estimation
+Scanning dependencies of target srslte_phy_common
+[  9%] Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_common.c.o
+[  9%] Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/phy_logger.c.o
+[ 10%] Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/sequence.c.o
+[ 10%] Building C object lib/src/phy/common/CMakeFiles/srslte_phy_common.dir/timestamp.c.o
+[ 10%] Built target srslte_phy_common
+Scanning dependencies of target srslte_fec
+[ 10%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/cbsegm.c.o
+[ 10%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/convcoder.c.o
+[ 11%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/crc.c.o
+[ 11%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/parity.c.o
+[ 11%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_conv.c.o
+[ 12%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/rm_turbo.c.o
+[ 12%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/softbuffer.c.o
+[ 12%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_lte.c.o
+[ 12%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/tc_interl_umts.c.o
+[ 13%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbocoder.c.o
+[ 13%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder.c.o
+[ 13%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_gen.c.o
+[ 14%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/turbodecoder_sse.c.o
+[ 14%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi.c.o
+[ 14%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2.c.o
+[ 14%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_avx2_16bit.c.o
+[ 15%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_neon.c.o
+[ 15%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_port.c.o
+[ 15%] Building C object lib/src/phy/fec/CMakeFiles/srslte_fec.dir/viterbi37_sse.c.o
+[ 15%] Built target srslte_fec
+Scanning dependencies of target srslte_mimo
+[ 15%] Building C object lib/src/phy/mimo/CMakeFiles/srslte_mimo.dir/layermap.c.o
+[ 15%] Building C object lib/src/phy/mimo/CMakeFiles/srslte_mimo.dir/precoding.c.o
+[ 15%] Built target srslte_mimo
+Scanning dependencies of target srslte_phch
+[ 15%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/cqi.c.o
+[ 15%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/dci.c.o
+[ 16%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pbch.c.o
+[ 16%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pcfich.c.o
+[ 16%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdcch.c.o
+[ 16%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pdsch.c.o
+[ 17%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/phich.c.o
+[ 17%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pmch.c.o
+[ 17%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prach.c.o
+[ 18%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/prb_dl.c.o
+[ 18%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pucch.c.o
+[ 18%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/pusch.c.o
+[ 18%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/ra.c.o
+[ 19%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/regs.c.o
+[ 19%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sch.c.o
+[ 19%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/sequences.c.o
+[ 20%] Building C object lib/src/phy/phch/CMakeFiles/srslte_phch.dir/uci.c.o
+[ 20%] Built target srslte_phch
+Scanning dependencies of target srslte_sync
+[ 20%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/cfo.c.o
+[ 20%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/cp.c.o
+[ 20%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/find_sss.c.o
+[ 21%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/gen_sss.c.o
+[ 21%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/pss.c.o
+[ 21%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sfo.c.o
+[ 21%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sss.c.o
+[ 22%] Building C object lib/src/phy/sync/CMakeFiles/srslte_sync.dir/sync.c.o
+[ 22%] Built target srslte_sync
+Scanning dependencies of target srslte_utils
+[ 23%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/bit.c.o
+[ 23%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/cexptab.c.o
+[ 23%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/convolution.c.o
+[ 24%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/debug.c.o
+[ 24%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/filter.c.o
+[ 24%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/mat.c.o
+[ 24%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/ringbuffer.c.o
+[ 25%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector.c.o
+[ 25%] Building C object lib/src/phy/utils/CMakeFiles/srslte_utils.dir/vector_simd.c.o
+[ 25%] Built target srslte_utils
+Scanning dependencies of target srslte_channel
+[ 26%] Building C object lib/src/phy/channel/CMakeFiles/srslte_channel.dir/ch_awgn.c.o
+[ 26%] Building C object lib/src/phy/channel/CMakeFiles/srslte_channel.dir/gauss.c.o
+[ 26%] Built target srslte_channel
+Scanning dependencies of target srslte_dft
+[ 27%] Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_fftw.c.o
+[ 27%] Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/dft_precoding.c.o
+[ 27%] Building C object lib/src/phy/dft/CMakeFiles/srslte_dft.dir/ofdm.c.o
+[ 27%] Built target srslte_dft
+Scanning dependencies of target srslte_io
+[ 27%] Building C object lib/src/phy/io/CMakeFiles/srslte_io.dir/binsource.c.o
+[ 28%] Building C object lib/src/phy/io/CMakeFiles/srslte_io.dir/filesink.c.o
+[ 28%] Building C object lib/src/phy/io/CMakeFiles/srslte_io.dir/filesource.c.o
+[ 28%] Building C object lib/src/phy/io/CMakeFiles/srslte_io.dir/netsink.c.o
+[ 29%] Building C object lib/src/phy/io/CMakeFiles/srslte_io.dir/netsource.c.o
+[ 29%] Built target srslte_io
+Scanning dependencies of target srslte_modem
+[ 29%] Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_hard.c.o
+[ 30%] Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/demod_soft.c.o
+[ 30%] Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/hard_demod_lte.c.o
+[ 30%] Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/lte_tables.c.o
+[ 31%] Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/mod.c.o
+[ 31%] Building C object lib/src/phy/modem/CMakeFiles/srslte_modem.dir/modem_table.c.o
+[ 31%] Built target srslte_modem
+Scanning dependencies of target srslte_resampling
+[ 31%] Building C object lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/decim.c.o
+[ 31%] Building C object lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/interp.c.o
+[ 32%] Building C object lib/src/phy/resampling/CMakeFiles/srslte_resampling.dir/resample_arb.c.o
+[ 32%] Built target srslte_resampling
+Scanning dependencies of target srslte_scrambling
+[ 33%] Building C object lib/src/phy/scrambling/CMakeFiles/srslte_scrambling.dir/scrambling.c.o
+[ 33%] Built target srslte_scrambling
+Scanning dependencies of target srslte_ue
+[ 33%] Building C object lib/src/phy/ue/CMakeFiles/srslte_ue.dir/ue_cell_search.c.o
+[ 33%] Building C object lib/src/phy/ue/CMakeFiles/srslte_ue.dir/ue_dl.c.o
+[ 34%] Building C object lib/src/phy/ue/CMakeFiles/srslte_ue.dir/ue_mib.c.o
+[ 34%] Building C object lib/src/phy/ue/CMakeFiles/srslte_ue.dir/ue_sync.c.o
+[ 34%] Building C object lib/src/phy/ue/CMakeFiles/srslte_ue.dir/ue_ul.c.o
+[ 34%] Built target srslte_ue
+Scanning dependencies of target srslte_phy
+[ 34%] Linking C static library libsrslte_phy.a
+[ 34%] Built target srslte_phy
+Scanning dependencies of target chest_test_ul
+[ 35%] Building C object lib/src/phy/ch_estimation/test/CMakeFiles/chest_test_ul.dir/chest_test_ul.c.o
+[ 35%] Linking CXX executable chest_test_ul
+[ 35%] Built target chest_test_ul
+Scanning dependencies of target refsignal_ul_test_all
+[ 35%] Building C object lib/src/phy/ch_estimation/test/CMakeFiles/refsignal_ul_test_all.dir/refsignal_ul_test.c.o
+[ 36%] Linking CXX executable refsignal_ul_test_all
+[ 36%] Built target refsignal_ul_test_all
+Scanning dependencies of target chest_test_dl
+[ 36%] Building C object lib/src/phy/ch_estimation/test/CMakeFiles/chest_test_dl.dir/chest_test_dl.c.o
+[ 36%] Linking C executable chest_test_dl
+[ 36%] Built target chest_test_dl
+Scanning dependencies of target rm_turbo_test
+[ 36%] Building C object lib/src/phy/fec/test/CMakeFiles/rm_turbo_test.dir/rm_turbo_test.c.o
+[ 36%] Linking C executable rm_turbo_test
+[ 36%] Built target rm_turbo_test
+Scanning dependencies of target turbodecoder_test
+[ 36%] Building C object lib/src/phy/fec/test/CMakeFiles/turbodecoder_test.dir/turbodecoder_test.c.o
+[ 36%] Linking C executable turbodecoder_test
+[ 36%] Built target turbodecoder_test
+Scanning dependencies of target rm_conv_test
+[ 36%] Building C object lib/src/phy/fec/test/CMakeFiles/rm_conv_test.dir/rm_conv_test.c.o
+[ 37%] Linking C executable rm_conv_test
+[ 37%] Built target rm_conv_test
+Scanning dependencies of target turbocoder_test
+[ 37%] Building C object lib/src/phy/fec/test/CMakeFiles/turbocoder_test.dir/turbocoder_test.c.o
+[ 38%] Linking C executable turbocoder_test
+[ 38%] Built target turbocoder_test
+Scanning dependencies of target viterbi_test
+[ 38%] Building C object lib/src/phy/fec/test/CMakeFiles/viterbi_test.dir/viterbi_test.c.o
+[ 39%] Linking C executable viterbi_test
+[ 39%] Built target viterbi_test
+Scanning dependencies of target crc_test
+[ 39%] Building C object lib/src/phy/fec/test/CMakeFiles/crc_test.dir/crc_test.c.o
+[ 40%] Linking C executable crc_test
+[ 40%] Built target crc_test
+Scanning dependencies of target layermap_test
+[ 40%] Building C object lib/src/phy/mimo/test/CMakeFiles/layermap_test.dir/layermap_test.c.o
+[ 40%] Linking C executable layermap_test
+[ 40%] Built target layermap_test
+Scanning dependencies of target pmi_select_test
+[ 40%] Building C object lib/src/phy/mimo/test/CMakeFiles/pmi_select_test.dir/pmi_select_test.c.o
+[ 41%] Linking C executable pmi_select_test
+[ 41%] Built target pmi_select_test
+Scanning dependencies of target precoding_test
+[ 42%] Building C object lib/src/phy/mimo/test/CMakeFiles/precoding_test.dir/precoder_test.c.o
+[ 42%] Linking C executable precoding_test
+[ 42%] Built target precoding_test
+Scanning dependencies of target pdcch_file_test
+[ 43%] Building C object lib/src/phy/phch/test/CMakeFiles/pdcch_file_test.dir/pdcch_file_test.c.o
+[ 43%] Linking C executable pdcch_file_test
+[ 43%] Built target pdcch_file_test
+Scanning dependencies of target pdsch_test
+[ 43%] Building C object lib/src/phy/phch/test/CMakeFiles/pdsch_test.dir/pdsch_test.c.o
+[ 43%] Linking C executable pdsch_test
+[ 43%] Built target pdsch_test
+Scanning dependencies of target srslte_rf_utils
+[ 43%] Building C object lib/src/phy/rf/CMakeFiles/srslte_rf_utils.dir/rf_utils.c.o
+[ 43%] Linking C static library libsrslte_rf_utils.a
+[ 43%] Built target srslte_rf_utils
+Scanning dependencies of target srslte_rf
+[ 43%] Building C object lib/src/phy/rf/CMakeFiles/srslte_rf.dir/rf_imp.c.o
+[ 43%] Building C object lib/src/phy/rf/CMakeFiles/srslte_rf.dir/rf_uhd_imp.c.o
+[ 43%] Building CXX object lib/src/phy/rf/CMakeFiles/srslte_rf.dir/uhd_c_api.cpp.o
+[ 44%] Linking CXX shared library libsrslte_rf.so
+[ 44%] Built target srslte_rf
+Scanning dependencies of target prach_test_usrp
+[ 44%] Building C object lib/src/phy/phch/test/CMakeFiles/prach_test_usrp.dir/prach_test_usrp.c.o
+[ 44%] Linking C executable prach_test_usrp
+[ 44%] Built target prach_test_usrp
+Scanning dependencies of target phich_file_test
+[ 44%] Building C object lib/src/phy/phch/test/CMakeFiles/phich_file_test.dir/phich_file_test.c.o
+[ 44%] Linking C executable phich_file_test
+[ 44%] Built target phich_file_test
+Scanning dependencies of target pcfich_file_test
+[ 45%] Building C object lib/src/phy/phch/test/CMakeFiles/pcfich_file_test.dir/pcfich_file_test.c.o
+[ 45%] Linking C executable pcfich_file_test
+[ 45%] Built target pcfich_file_test
+Scanning dependencies of target pmch_test
+[ 45%] Building C object lib/src/phy/phch/test/CMakeFiles/pmch_test.dir/pmch_test.c.o
+[ 45%] Linking C executable pmch_test
+[ 45%] Built target pmch_test
+Scanning dependencies of target pdcch_test
+[ 45%] Building C object lib/src/phy/phch/test/CMakeFiles/pdcch_test.dir/pdcch_test.c.o
+[ 46%] Linking C executable pdcch_test
+[ 46%] Built target pdcch_test
+Scanning dependencies of target phich_test
+[ 47%] Building C object lib/src/phy/phch/test/CMakeFiles/phich_test.dir/phich_test.c.o
+[ 47%] Linking C executable phich_test
+[ 47%] Built target phich_test
+Scanning dependencies of target pusch_test
+[ 47%] Building C object lib/src/phy/phch/test/CMakeFiles/pusch_test.dir/pusch_test.c.o
+[ 47%] Linking C executable pusch_test
+[ 47%] Built target pusch_test
+Scanning dependencies of target pbch_file_test
+[ 47%] Building C object lib/src/phy/phch/test/CMakeFiles/pbch_file_test.dir/pbch_file_test.c.o
+[ 48%] Linking C executable pbch_file_test
+[ 48%] Built target pbch_file_test
+Scanning dependencies of target pcfich_test
+[ 48%] Building C object lib/src/phy/phch/test/CMakeFiles/pcfich_test.dir/pcfich_test.c.o
+[ 48%] Linking C executable pcfich_test
+[ 48%] Built target pcfich_test
+Scanning dependencies of target pbch_test
+[ 48%] Building C object lib/src/phy/phch/test/CMakeFiles/pbch_test.dir/pbch_test.c.o
+[ 48%] Linking C executable pbch_test
+[ 48%] Built target pbch_test
+Scanning dependencies of target pdsch_pdcch_file_test
+[ 48%] Building C object lib/src/phy/phch/test/CMakeFiles/pdsch_pdcch_file_test.dir/pdsch_pdcch_file_test.c.o
+[ 49%] Linking C executable pdsch_pdcch_file_test
+[ 49%] Built target pdsch_pdcch_file_test
+Scanning dependencies of target pmch_file_test
+[ 49%] Building C object lib/src/phy/phch/test/CMakeFiles/pmch_file_test.dir/pmch_file_test.c.o
+[ 50%] Linking C executable pmch_file_test
+[ 50%] Built target pmch_file_test
+Scanning dependencies of target pucch_test
+[ 50%] Building C object lib/src/phy/phch/test/CMakeFiles/pucch_test.dir/pucch_test.c.o
+[ 51%] Linking C executable pucch_test
+[ 51%] Built target pucch_test
+Scanning dependencies of target prach_test
+[ 51%] Building C object lib/src/phy/phch/test/CMakeFiles/prach_test.dir/prach_test.c.o
+[ 51%] Linking C executable prach_test
+[ 51%] Built target prach_test
+Scanning dependencies of target prach_test_multi
+[ 52%] Building C object lib/src/phy/phch/test/CMakeFiles/prach_test_multi.dir/prach_test_multi.c.o
+[ 52%] Linking C executable prach_test_multi
+[ 52%] Built target prach_test_multi
+Scanning dependencies of target pss_file
+[ 52%] Building C object lib/src/phy/sync/test/CMakeFiles/pss_file.dir/pss_file.c.o
+[ 52%] Linking C executable pss_file
+[ 52%] Built target pss_file
+Scanning dependencies of target pss_usrp
+[ 53%] Building C object lib/src/phy/sync/test/CMakeFiles/pss_usrp.dir/pss_usrp.c.o
+[ 53%] Linking C executable pss_usrp
+[ 53%] Built target pss_usrp
+Scanning dependencies of target sync_test
+[ 53%] Building C object lib/src/phy/sync/test/CMakeFiles/sync_test.dir/sync_test.c.o
+[ 53%] Linking C executable sync_test
+[ 53%] Built target sync_test
+Scanning dependencies of target cfo_test
+[ 54%] Building C object lib/src/phy/sync/test/CMakeFiles/cfo_test.dir/cfo_test.c.o
+[ 54%] Linking C executable cfo_test
+[ 54%] Built target cfo_test
+Scanning dependencies of target dft_test
+[ 54%] Building C object lib/src/phy/utils/test/CMakeFiles/dft_test.dir/dft_test.c.o
+[ 54%] Linking C executable dft_test
+[ 54%] Built target dft_test
+Scanning dependencies of target algebra_test
+[ 54%] Building C object lib/src/phy/utils/test/CMakeFiles/algebra_test.dir/mat_test.c.o
+[ 54%] Linking C executable algebra_test
+[ 54%] Built target algebra_test
+Scanning dependencies of target vector_test
+[ 55%] Building C object lib/src/phy/utils/test/CMakeFiles/vector_test.dir/vector_test.c.o
+[ 55%] Linking C executable vector_test
+[ 55%] Built target vector_test
+Scanning dependencies of target ofdm_test
+[ 55%] Building C object lib/src/phy/dft/test/CMakeFiles/ofdm_test.dir/ofdm_test.c.o
+[ 55%] Linking C executable ofdm_test
+[ 55%] Built target ofdm_test
+Scanning dependencies of target soft_demod_test
+[ 55%] Building C object lib/src/phy/modem/test/CMakeFiles/soft_demod_test.dir/soft_demod_test.c.o
+[ 55%] Linking C executable soft_demod_test
+[ 55%] Built target soft_demod_test
+Scanning dependencies of target modem_test
+[ 55%] Building C object lib/src/phy/modem/test/CMakeFiles/modem_test.dir/modem_test.c.o
+[ 56%] Linking C executable modem_test
+[ 56%] Built target modem_test
+Scanning dependencies of target resample_arb_test
+[ 57%] Building C object lib/src/phy/resampling/test/CMakeFiles/resample_arb_test.dir/resample_arb_test.c.o
+[ 57%] Linking C executable resample_arb_test
+[ 57%] Built target resample_arb_test
+Scanning dependencies of target resample_arb_bench
+[ 57%] Building C object lib/src/phy/resampling/test/CMakeFiles/resample_arb_bench.dir/resample_arb_bench.c.o
+[ 57%] Linking C executable resample_arb_bench
+[ 57%] Built target resample_arb_bench
+Scanning dependencies of target scrambling_test
+[ 58%] Building C object lib/src/phy/scrambling/test/CMakeFiles/scrambling_test.dir/scrambling_test.c.o
+[ 58%] Linking C executable scrambling_test
+[ 58%] Built target scrambling_test
+Scanning dependencies of target srslte_radio
+[ 58%] Building CXX object lib/src/radio/CMakeFiles/srslte_radio.dir/radio.cc.o
+[ 58%] Building CXX object lib/src/radio/CMakeFiles/srslte_radio.dir/radio_multi.cc.o
+[ 59%] Linking CXX static library libsrslte_radio.a
+[ 59%] Built target srslte_radio
+Scanning dependencies of target benchmark_radio
+[ 59%] Building CXX object lib/src/radio/test/CMakeFiles/benchmark_radio.dir/benchmark_radio.cc.o
+[ 59%] Linking CXX executable benchmark_radio
+[ 59%] Built target benchmark_radio
+Scanning dependencies of target srslte_upper
+[ 59%] Building CXX object lib/src/upper/CMakeFiles/srslte_upper.dir/gtpu.cc.o
+[ 60%] Building CXX object lib/src/upper/CMakeFiles/srslte_upper.dir/pdcp.cc.o
+[ 60%] Building CXX object lib/src/upper/CMakeFiles/srslte_upper.dir/pdcp_entity.cc.o
+[ 60%] Building CXX object lib/src/upper/CMakeFiles/srslte_upper.dir/rlc.cc.o
+[ 61%] Building CXX object lib/src/upper/CMakeFiles/srslte_upper.dir/rlc_am.cc.o
+[ 61%] Building CXX object lib/src/upper/CMakeFiles/srslte_upper.dir/rlc_tm.cc.o
+[ 61%] Building CXX object lib/src/upper/CMakeFiles/srslte_upper.dir/rlc_um.cc.o
+[ 61%] Linking CXX static library libsrslte_upper.a
+[ 61%] Built target srslte_upper
+Scanning dependencies of target pdsch_ue
+[ 61%] Building C object lib/examples/CMakeFiles/pdsch_ue.dir/pdsch_ue.c.o
+[ 62%] Linking CXX executable pdsch_ue
+[ 62%] Built target pdsch_ue
+Scanning dependencies of target usrp_txrx
+[ 62%] Building C object lib/examples/CMakeFiles/usrp_txrx.dir/usrp_txrx.c.o
+[ 62%] Linking C executable usrp_txrx
+[ 62%] Built target usrp_txrx
+Scanning dependencies of target synch_file
+[ 63%] Building C object lib/examples/CMakeFiles/synch_file.dir/synch_file.c.o
+[ 63%] Linking C executable synch_file
+[ 63%] Built target synch_file
+Scanning dependencies of target pdsch_enodeb
+[ 63%] Building C object lib/examples/CMakeFiles/pdsch_enodeb.dir/pdsch_enodeb.c.o
+[ 63%] Linking CXX executable pdsch_enodeb
+[ 63%] Built target pdsch_enodeb
+Scanning dependencies of target cell_measurement
+[ 63%] Building C object lib/examples/CMakeFiles/cell_measurement.dir/cell_measurement.c.o
+[ 64%] Linking CXX executable cell_measurement
+[ 64%] Built target cell_measurement
+Scanning dependencies of target cell_search
+[ 64%] Building C object lib/examples/CMakeFiles/cell_search.dir/cell_search.c.o
+[ 64%] Linking CXX executable cell_search
+[ 64%] Built target cell_search
+Scanning dependencies of target usrp_capture
+[ 64%] Building C object lib/examples/CMakeFiles/usrp_capture.dir/usrp_capture.c.o
+[ 64%] Linking C executable usrp_capture
+[ 64%] Built target usrp_capture
+Scanning dependencies of target usrp_capture_sync
+[ 65%] Building C object lib/examples/CMakeFiles/usrp_capture_sync.dir/usrp_capture_sync.c.o
+[ 65%] Linking C executable usrp_capture_sync
+[ 65%] Built target usrp_capture_sync
+Scanning dependencies of target srslte_asn1_rrc_mcch_test
+[ 65%] Building CXX object lib/test/asn1/CMakeFiles/srslte_asn1_rrc_mcch_test.dir/srslte_asn1_rrc_mcch_test.cc.o
+[ 65%] Linking CXX executable srslte_asn1_rrc_mcch_test
+[ 65%] Built target srslte_asn1_rrc_mcch_test
+Scanning dependencies of target srslte_asn1_rrc_meas_test
+[ 66%] Building CXX object lib/test/asn1/CMakeFiles/srslte_asn1_rrc_meas_test.dir/srslte_asn1_rrc_meas_test.cc.o
+[ 66%] Linking CXX executable srslte_asn1_rrc_meas_test
+[ 66%] Built target srslte_asn1_rrc_meas_test
+Scanning dependencies of target bcd_helpers_test
+[ 66%] Building CXX object lib/test/common/CMakeFiles/bcd_helpers_test.dir/bcd_helpers_test.cc.o
+[ 67%] Linking CXX executable bcd_helpers_test
+[ 67%] Built target bcd_helpers_test
+Scanning dependencies of target msg_queue_test
+[ 67%] Building CXX object lib/test/common/CMakeFiles/msg_queue_test.dir/msg_queue_test.cc.o
+[ 67%] Linking CXX executable msg_queue_test
+[ 67%] Built target msg_queue_test
+Scanning dependencies of target test_eea1
+[ 67%] Building CXX object lib/test/common/CMakeFiles/test_eea1.dir/test_eea1.cc.o
+[ 67%] Linking CXX executable test_eea1
+[ 67%] Built target test_eea1
+Scanning dependencies of target logger_test
+[ 67%] Building CXX object lib/test/common/CMakeFiles/logger_test.dir/logger_test.cc.o
+[ 67%] Linking CXX executable logger_test
+[ 67%] Built target logger_test
+Scanning dependencies of target test_eea2
+[ 68%] Building CXX object lib/test/common/CMakeFiles/test_eea2.dir/test_eea2.cc.o
+[ 68%] Linking CXX executable test_eea2
+[ 68%] Built target test_eea2
+Scanning dependencies of target test_f12345
+[ 68%] Building CXX object lib/test/common/CMakeFiles/test_f12345.dir/test_f12345.cc.o
+[ 68%] Linking CXX executable test_f12345
+[ 68%] Built target test_f12345
+Scanning dependencies of target log_filter_test
+[ 68%] Building CXX object lib/test/common/CMakeFiles/log_filter_test.dir/log_filter_test.cc.o
+[ 69%] Linking CXX executable log_filter_test
+[ 69%] Built target log_filter_test
+Scanning dependencies of target timeout_test
+[ 70%] Building CXX object lib/test/common/CMakeFiles/timeout_test.dir/timeout_test.cc.o
+[ 70%] Linking CXX executable timeout_test
+[ 70%] Built target timeout_test
+Scanning dependencies of target phy_dl_test
+[ 70%] Building C object lib/test/phy/CMakeFiles/phy_dl_test.dir/phy_dl_test.c.o
+[ 70%] Linking CXX executable phy_dl_test
+[ 70%] Built target phy_dl_test
+Scanning dependencies of target rlc_am_data_test
+[ 71%] Building CXX object lib/test/upper/CMakeFiles/rlc_am_data_test.dir/rlc_am_data_test.cc.o
+[ 71%] Linking CXX executable rlc_am_data_test
+[ 71%] Built target rlc_am_data_test
+Scanning dependencies of target rlc_am_control_test
+[ 71%] Building CXX object lib/test/upper/CMakeFiles/rlc_am_control_test.dir/rlc_am_control_test.cc.o
+[ 71%] Linking CXX executable rlc_am_control_test
+[ 71%] Built target rlc_am_control_test
+Scanning dependencies of target rlc_am_test
+[ 71%] Building CXX object lib/test/upper/CMakeFiles/rlc_am_test.dir/rlc_am_test.cc.o
+[ 71%] Linking CXX executable rlc_am_test
+[ 71%] Built target rlc_am_test
+Scanning dependencies of target rlc_stress_test
+[ 72%] Building CXX object lib/test/upper/CMakeFiles/rlc_stress_test.dir/rlc_stress_test.cc.o
+[ 72%] Linking CXX executable rlc_stress_test
+[ 72%] Built target rlc_stress_test
+Scanning dependencies of target rlc_um_data_test
+[ 72%] Building CXX object lib/test/upper/CMakeFiles/rlc_um_data_test.dir/rlc_um_data_test.cc.o
+[ 73%] Linking CXX executable rlc_um_data_test
+[ 73%] Built target rlc_um_data_test
+Scanning dependencies of target rlc_um_test
+[ 73%] Building CXX object lib/test/upper/CMakeFiles/rlc_um_test.dir/rlc_um_test.cc.o
+[ 73%] Linking CXX executable rlc_um_test
+[ 73%] Built target rlc_um_test
+Scanning dependencies of target srsue_upper
+[ 73%] Building CXX object srsue/src/upper/CMakeFiles/srsue_upper.dir/gw.cc.o
+[ 74%] Building CXX object srsue/src/upper/CMakeFiles/srsue_upper.dir/nas.cc.o
+[ 74%] Building CXX object srsue/src/upper/CMakeFiles/srsue_upper.dir/rrc.cc.o
+[ 74%] Building CXX object srsue/src/upper/CMakeFiles/srsue_upper.dir/usim_base.cc.o
+[ 74%] Building CXX object srsue/src/upper/CMakeFiles/srsue_upper.dir/usim.cc.o
+[ 75%] Linking CXX static library libsrsue_upper.a
+[ 75%] Built target srsue_upper
+Scanning dependencies of target srsue_phy
+[ 76%] Building CXX object srsue/src/phy/CMakeFiles/srsue_phy.dir/phch_common.cc.o
+[ 76%] Building CXX object srsue/src/phy/CMakeFiles/srsue_phy.dir/phch_recv.cc.o
+[ 76%] Building CXX object srsue/src/phy/CMakeFiles/srsue_phy.dir/phch_worker.cc.o
+/home/cigarier/Desktop/srsLTE/srsue/src/phy/phch_worker.cc:50:2: warning: #warning Compiling without srsGUI support [-Wcpp]
+ #warning Compiling without srsGUI support
+  ^~~~~~~
+[ 76%] Building CXX object srsue/src/phy/CMakeFiles/srsue_phy.dir/phy.cc.o
+[ 77%] Building CXX object srsue/src/phy/CMakeFiles/srsue_phy.dir/prach.cc.o
+[ 77%] Linking CXX static library libsrsue_phy.a
+[ 77%] Built target srsue_phy
+Scanning dependencies of target srsue_mac
+[ 77%] Building CXX object srsue/src/mac/CMakeFiles/srsue_mac.dir/demux.cc.o
+[ 78%] Building CXX object srsue/src/mac/CMakeFiles/srsue_mac.dir/mac.cc.o
+[ 78%] Building CXX object srsue/src/mac/CMakeFiles/srsue_mac.dir/mux.cc.o
+[ 78%] Building CXX object srsue/src/mac/CMakeFiles/srsue_mac.dir/proc_bsr.cc.o
+[ 79%] Building CXX object srsue/src/mac/CMakeFiles/srsue_mac.dir/proc_phr.cc.o
+[ 79%] Building CXX object srsue/src/mac/CMakeFiles/srsue_mac.dir/proc_ra.cc.o
+[ 79%] Building CXX object srsue/src/mac/CMakeFiles/srsue_mac.dir/proc_sr.cc.o
+[ 79%] Linking CXX static library libsrsue_mac.a
+[ 79%] Built target srsue_mac
+Scanning dependencies of target srsue
+[ 80%] Building CXX object srsue/src/CMakeFiles/srsue.dir/main.cc.o
+[ 80%] Building CXX object srsue/src/CMakeFiles/srsue.dir/ue_base.cc.o
+[ 80%] Building CXX object srsue/src/CMakeFiles/srsue.dir/ue.cc.o
+[ 81%] Building CXX object srsue/src/CMakeFiles/srsue.dir/metrics_stdout.cc.o
+[ 81%] Building CXX object srsue/src/CMakeFiles/srsue.dir/metrics_csv.cc.o
+[ 81%] Linking CXX executable srsue
+[ 81%] Built target srsue
+Scanning dependencies of target metrics_test
+[ 81%] Building CXX object srsue/test/CMakeFiles/metrics_test.dir/metrics_test.cc.o
+[ 81%] Building CXX object srsue/test/CMakeFiles/metrics_test.dir/__/src/metrics_stdout.cc.o
+[ 82%] Building CXX object srsue/test/CMakeFiles/metrics_test.dir/__/src/metrics_csv.cc.o
+[ 82%] Linking CXX executable metrics_test
+[ 82%] Built target metrics_test
+Scanning dependencies of target mac_test
+[ 83%] Building CXX object srsue/test/mac/CMakeFiles/mac_test.dir/mac_test.cc.o
+[ 83%] Linking CXX executable mac_test
+[ 83%] Built target mac_test
+Scanning dependencies of target usim_test
+[ 83%] Building CXX object srsue/test/upper/CMakeFiles/usim_test.dir/usim_test.cc.o
+[ 84%] Linking CXX executable usim_test
+[ 84%] Built target usim_test
+Scanning dependencies of target rrc_reconfig_test
+[ 85%] Building CXX object srsue/test/upper/CMakeFiles/rrc_reconfig_test.dir/rrc_reconfig_test.cc.o
+[ 85%] Linking CXX executable rrc_reconfig_test
+[ 85%] Built target rrc_reconfig_test
+Scanning dependencies of target nas_test
+[ 85%] Building CXX object srsue/test/upper/CMakeFiles/nas_test.dir/nas_test.cc.o
+[ 86%] Linking CXX executable nas_test
+[ 86%] Built target nas_test
+Scanning dependencies of target srsenb_upper
+[ 86%] Building CXX object srsenb/src/upper/CMakeFiles/srsenb_upper.dir/gtpu.cc.o
+[ 86%] Building CXX object srsenb/src/upper/CMakeFiles/srsenb_upper.dir/pdcp.cc.o
+[ 87%] Building CXX object srsenb/src/upper/CMakeFiles/srsenb_upper.dir/rlc.cc.o
+[ 87%] Building CXX object srsenb/src/upper/CMakeFiles/srsenb_upper.dir/rrc.cc.o
+[ 87%] Building CXX object srsenb/src/upper/CMakeFiles/srsenb_upper.dir/s1ap.cc.o
+[ 87%] Linking CXX static library libsrsenb_upper.a
+[ 87%] Built target srsenb_upper
+Scanning dependencies of target srsenb_phy
+[ 87%] Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phch_common.cc.o
+[ 88%] Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phch_worker.cc.o
+/home/cigarier/Desktop/srsLTE/srsenb/src/phy/phch_worker.cc:62:2: warning: #warning Compiling without srsGUI support [-Wcpp]
+ #warning Compiling without srsGUI support
+  ^~~~~~~
+[ 88%] Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/phy.cc.o
+[ 88%] Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/prach_worker.cc.o
+[ 88%] Building CXX object srsenb/src/phy/CMakeFiles/srsenb_phy.dir/txrx.cc.o
+[ 89%] Linking CXX static library libsrsenb_phy.a
+[ 89%] Built target srsenb_phy
+Scanning dependencies of target srsenb_mac
+[ 89%] Building CXX object srsenb/src/mac/CMakeFiles/srsenb_mac.dir/mac.cc.o
+[ 90%] Building CXX object srsenb/src/mac/CMakeFiles/srsenb_mac.dir/scheduler.cc.o
+[ 90%] Building CXX object srsenb/src/mac/CMakeFiles/srsenb_mac.dir/scheduler_harq.cc.o
+[ 90%] Building CXX object srsenb/src/mac/CMakeFiles/srsenb_mac.dir/scheduler_metric.cc.o
+[ 91%] Building CXX object srsenb/src/mac/CMakeFiles/srsenb_mac.dir/scheduler_ue.cc.o
+[ 91%] Building CXX object srsenb/src/mac/CMakeFiles/srsenb_mac.dir/ue.cc.o
+[ 91%] Linking CXX static library libsrsenb_mac.a
+[ 91%] Built target srsenb_mac
+Scanning dependencies of target srsenb
+[ 92%] Building CXX object srsenb/src/CMakeFiles/srsenb.dir/main.cc.o
+[ 92%] Building CXX object srsenb/src/CMakeFiles/srsenb.dir/enb.cc.o
+[ 92%] Building CXX object srsenb/src/CMakeFiles/srsenb.dir/parser.cc.o
+[ 93%] Building CXX object srsenb/src/CMakeFiles/srsenb.dir/enb_cfg_parser.cc.o
+[ 93%] Building CXX object srsenb/src/CMakeFiles/srsenb.dir/metrics_stdout.cc.o
+[ 93%] Linking CXX executable srsenb
+[ 93%] Built target srsenb
+Scanning dependencies of target scheduler_test
+[ 93%] Building CXX object srsenb/test/mac/CMakeFiles/scheduler_test.dir/scheduler_test.cc.o
+[ 93%] Linking CXX executable scheduler_test
+[ 93%] Built target scheduler_test
+Scanning dependencies of target ip_test_enb
+[ 93%] Building CXX object srsenb/test/upper/CMakeFiles/ip_test_enb.dir/ip_test.cc.o
+[ 94%] Linking CXX executable ip_test_enb
+[ 94%] Built target ip_test_enb
+Scanning dependencies of target plmn_test
+[ 95%] Building CXX object srsenb/test/upper/CMakeFiles/plmn_test.dir/plmn_test.cc.o
+[ 95%] Linking CXX executable plmn_test
+[ 95%] Built target plmn_test
+Scanning dependencies of target srsepc_sgw
+[ 96%] Building CXX object srsepc/src/spgw/CMakeFiles/srsepc_sgw.dir/spgw.cc.o
+[ 96%] Linking CXX static library libsrsepc_sgw.a
+[ 96%] Built target srsepc_sgw
+Scanning dependencies of target srsepc_mme
+[ 97%] Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme.cc.o
+[ 97%] Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/mme_gtpc.cc.o
+[ 97%] Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap.cc.o
+[ 98%] Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_ctx_mngmt_proc.cc.o
+[ 98%] Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_mngmt_proc.cc.o
+[ 98%] Building CXX object srsepc/src/mme/CMakeFiles/srsepc_mme.dir/s1ap_nas_transport.cc.o
+[ 98%] Linking CXX static library libsrsepc_mme.a
+[ 98%] Built target srsepc_mme
+Scanning dependencies of target srsepc_hss
+[ 98%] Building CXX object srsepc/src/hss/CMakeFiles/srsepc_hss.dir/hss.cc.o
+[ 99%] Linking CXX static library libsrsepc_hss.a
+[ 99%] Built target srsepc_hss
+Scanning dependencies of target srsepc
+[100%] Building CXX object srsepc/src/CMakeFiles/srsepc.dir/main.cc.o
+[100%] Linking CXX executable srsepc
+[100%] Built target srsepc
+Scanning dependencies of target srsepc_mbms_gw
+[100%] Building CXX object srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/main.cc.o
+[100%] Building CXX object srsepc/src/mbms-gw/CMakeFiles/srsepc_mbms_gw.dir/mbms-gw.cc.o
+[100%] Linking CXX static library libsrsepc_mbms_gw.a
+[100%] Built target srsepc_mbms_gw
+Scanning dependencies of target srsmbms
+[100%] Building CXX object srsepc/src/CMakeFiles/srsmbms.dir/mbms-gw/main.cc.o
+[100%] Linking CXX executable srsmbms
+[100%] Built target srsmbms

@@ -1,0 +1,16 @@
+
+Built in Release mode using commit 83ed3ae on branch master.
+
+---  IDU LTE eNodeB  ---
+
+Reading configuration file enb.conf...
+Opening USRP with args: type=b200,master_clock_rate=30.72e6
+Setting frequency: DL=2685.0 Mhz, UL=2565.0 MHz
+Trying to start a plot but plots are disabled (ENABLE_GUI constant in phch_worker.cc)
+Setting Sampling frequency 5.76 MHz
+
+==== eNodeB started ===
+Type <t> to view trace
+RACH:  tti=3391, preamble=7, offset=1, temp_crnti=0x46
+Disconnecting rnti=0x46.
+Closing stdin thread.
