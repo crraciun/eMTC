@@ -107,7 +107,7 @@ int srslte_ue_dl_init(srslte_ue_dl_t *q,
     }
     srslte_ofdm_set_non_mbsfn_region(&q->fft_mbsfn, 2); // Set a default to init
     
-    if (srslte_chest_dl_init(&q->chest, max_prb)) {
+/*    if (srslte_chest_dl_init(&q->chest, max_prb)) {
       fprintf(stderr, "Error initiating channel estimator\n");
       goto clean_exit;
     }
@@ -119,7 +119,7 @@ int srslte_ue_dl_init(srslte_ue_dl_t *q,
       fprintf(stderr, "Error creating PHICH object\n");
       goto clean_exit;
     }
-
+*/
     if (srslte_pdcch_init_ue(&q->pdcch, max_prb, nof_rx_antennas)) {
       fprintf(stderr, "Error creating PDCCH object\n");
       goto clean_exit;
@@ -167,8 +167,8 @@ void srslte_ue_dl_free(srslte_ue_dl_t *q) {
     srslte_ofdm_rx_free(&q->fft_mbsfn);
     srslte_chest_dl_free(&q->chest);
     srslte_regs_free(&q->regs);
-    srslte_pcfich_free(&q->pcfich);
-    srslte_phich_free(&q->phich);
+//    srslte_pcfich_free(&q->pcfich);
+//    srslte_phich_free(&q->phich);
     srslte_pdcch_free(&q->pdcch);
     srslte_pdsch_free(&q->pdsch);
     srslte_pmch_free(&q->pmch);
@@ -230,7 +230,7 @@ int srslte_ue_dl_set_cell(srslte_ue_dl_t *q, srslte_cell_t cell)
         fprintf(stderr, "Error resizing channel estimator\n");
         return SRSLTE_ERROR;
       }
-      if (srslte_pcfich_set_cell(&q->pcfich, &q->regs, q->cell)) {
+/*      if (srslte_pcfich_set_cell(&q->pcfich, &q->regs, q->cell)) {
         fprintf(stderr, "Error resizing PCFICH object\n");
         return SRSLTE_ERROR;
       }
@@ -238,7 +238,7 @@ int srslte_ue_dl_set_cell(srslte_ue_dl_t *q, srslte_cell_t cell)
         fprintf(stderr, "Error resizing PHICH object\n");
         return SRSLTE_ERROR;
       }
-
+*/
       if (srslte_pdcch_set_cell(&q->pdcch, &q->regs, q->cell)) {
         fprintf(stderr, "Error resizing PDCCH object\n");
         return SRSLTE_ERROR;
@@ -418,7 +418,7 @@ int srslte_ue_dl_decode_estimate_mbsfn(srslte_ue_dl_t *q, uint32_t sf_idx, uint3
 
 
     /* First decode PCFICH and obtain CFI */
-    if (srslte_pcfich_decode_multi(&q->pcfich, q->sf_symbols_m, q->ce_m, 
+/*    if (srslte_pcfich_decode_multi(&q->pcfich, q->sf_symbols_m, q->ce_m, 
                              srslte_chest_dl_get_noise_estimate(&q->chest), 
                              sf_idx, cfi, &cfi_corr)<0) {
       fprintf(stderr, "Error decoding PCFICH\n");
@@ -432,8 +432,8 @@ int srslte_ue_dl_decode_estimate_mbsfn(srslte_ue_dl_t *q, uint32_t sf_idx, uint3
     return SRSLTE_ERROR_INVALID_INPUTS; 
   }
 }
-
-
+*/
+*cfi=3;
 int srslte_ue_dl_cfg_grant(srslte_ue_dl_t *q, srslte_ra_dl_grant_t *grant, uint32_t cfi, uint32_t sf_idx,
                                  int rvidx[SRSLTE_MAX_CODEWORDS], srslte_mimo_type_t mimo_type) {
   uint32_t pmi = 0;
@@ -962,12 +962,12 @@ void srslte_ue_dl_save_signal(srslte_ue_dl_t *q, srslte_softbuffer_rx_t *softbuf
   if (q->cell.nof_ports > 1) {
     srslte_vec_save_file("ce1", q->ce[1], SRSLTE_SF_LEN_RE(q->cell.nof_prb, q->cell.cp)*sizeof(cf_t));
   }
-  srslte_vec_save_file("pcfich_ce0", q->pcfich.ce[0], q->pcfich.nof_symbols*sizeof(cf_t));
+/*  srslte_vec_save_file("pcfich_ce0", q->pcfich.ce[0], q->pcfich.nof_symbols*sizeof(cf_t));
   srslte_vec_save_file("pcfich_ce1", q->pcfich.ce[1], q->pcfich.nof_symbols*sizeof(cf_t));
   srslte_vec_save_file("pcfich_symbols", q->pcfich.symbols[0], q->pcfich.nof_symbols*sizeof(cf_t));
   srslte_vec_save_file("pcfich_eq_symbols", q->pcfich.d, q->pcfich.nof_symbols*sizeof(cf_t));
   srslte_vec_save_file("pcfich_llr", q->pcfich.data_f, PCFICH_CFI_LEN*sizeof(float));
-  
+ */ 
   srslte_vec_save_file("pdcch_ce0", q->pdcch.ce[0], q->pdcch.nof_cce[cfi-1]*36*sizeof(cf_t));
   srslte_vec_save_file("pdcch_ce1", q->pdcch.ce[1], q->pdcch.nof_cce[cfi-1]*36*sizeof(cf_t));
   srslte_vec_save_file("pdcch_symbols", q->pdcch.symbols[0], q->pdcch.nof_cce[cfi-1]*36*sizeof(cf_t));
