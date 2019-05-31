@@ -79,7 +79,7 @@ int srslte_enb_dl_init(srslte_enb_dl_t *q, cf_t *out_buffer[SRSLTE_MAX_PORTS], u
       fprintf(stderr, "Error creating PBCH object\n");
       goto clean_exit;
     }
-    if (srslte_pcfich_init(&q->pcfich, 0)) {
+ /*   if (srslte_pcfich_init(&q->pcfich, 0)) {
       fprintf(stderr, "Error creating PCFICH object\n");
       goto clean_exit;
     }
@@ -87,6 +87,7 @@ int srslte_enb_dl_init(srslte_enb_dl_t *q, cf_t *out_buffer[SRSLTE_MAX_PORTS], u
       fprintf(stderr, "Error creating PHICH object\n");
       goto clean_exit;
     }
+ */
     int mbsfn_area_id = 1;
     
     
@@ -137,7 +138,7 @@ void srslte_enb_dl_free(srslte_enb_dl_t *q)
     srslte_ofdm_tx_free(&q->ifft_mbsfn);
     srslte_regs_free(&q->regs);
     srslte_pbch_free(&q->pbch);
-    srslte_pcfich_free(&q->pcfich);
+//    srslte_pcfich_free(&q->pcfich);
     srslte_phich_free(&q->phich);
     srslte_pdcch_free(&q->pdcch);
     srslte_pdsch_free(&q->pdsch);
@@ -193,7 +194,7 @@ int srslte_enb_dl_set_cell(srslte_enb_dl_t *q, srslte_cell_t cell)
         fprintf(stderr, "Error creating PBCH object\n");
         return SRSLTE_ERROR;
       }
-      if (srslte_pcfich_set_cell(&q->pcfich, &q->regs, q->cell)) {
+/*      if (srslte_pcfich_set_cell(&q->pcfich, &q->regs, q->cell)) {
         fprintf(stderr, "Error creating PCFICH object\n");
         return SRSLTE_ERROR;
       }
@@ -201,6 +202,7 @@ int srslte_enb_dl_set_cell(srslte_enb_dl_t *q, srslte_cell_t cell)
         fprintf(stderr, "Error creating PHICH object\n");
         return SRSLTE_ERROR;
       }
+*/
 
       if (srslte_pdcch_set_cell(&q->pdcch, &q->regs, q->cell)) {
         fprintf(stderr, "Error creating PDCCH object\n");
@@ -354,7 +356,7 @@ void srslte_enb_dl_put_mib(srslte_enb_dl_t *q, uint32_t tti)
     srslte_pbch_encode(&q->pbch, bch_payload, q->slot1_symbols, ((tti/10)%4));
   }  
 }
-
+/*
 void srslte_enb_dl_put_pcfich(srslte_enb_dl_t *q, uint32_t sf_idx)
 {
   srslte_pcfich_encode(&q->pcfich, q->cfi, q->sf_symbols, sf_idx);         
@@ -367,7 +369,7 @@ void srslte_enb_dl_put_phich(srslte_enb_dl_t *q, uint8_t ack, uint32_t n_prb_low
   srslte_phich_calc(&q->phich, n_prb_lowest, n_dmrs, &ngroup, &nseq);
   srslte_phich_encode(&q->phich, ack, ngroup, nseq, sf_idx, q->sf_symbols);
 }
-
+*/
 void srslte_enb_dl_put_base(srslte_enb_dl_t *q, uint32_t tti) 
 {
   uint32_t sf_idx = tti%10;
