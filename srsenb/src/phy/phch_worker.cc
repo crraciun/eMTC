@@ -431,7 +431,7 @@ void phch_worker::work_imp()
 
   // Put base signals (references, PBCH, PCFICH and PSS/SSS) into the resource grid
   srslte_enb_dl_clear_sf(&enb_dl);
-  srslte_enb_dl_set_cfi(&enb_dl, dl_grants[t_tx_dl].cfi);
+  //srslte_enb_dl_set_cfi(&enb_dl, dl_grants[t_tx_dl].cfi);
   
   if(sf_cfg.sf_type == SUBFRAME_TYPE_REGULAR) {
     srslte_enb_dl_put_base(&enb_dl, tti_tx_dl);
