@@ -92,7 +92,7 @@ srslte_filesink_t fsink;
 srslte_ofdm_t ifft[SRSLTE_MAX_PORTS];
 srslte_ofdm_t ifft_mbsfn;
 srslte_pbch_t pbch;
-srslte_pcfich_t pcfich;
+//srslte_pcfich_t pcfich;
 srslte_pdcch_t pdcch;
 srslte_pdsch_t pdsch;
 srslte_pdsch_cfg_t pdsch_cfg;
@@ -356,6 +356,7 @@ void base_init() {
     fprintf(stderr, "Error initiating regs\n");
     exit(-1);
   }
+/*
   if (srslte_pcfich_init(&pcfich, 1)) {
     fprintf(stderr, "Error creating PBCH object\n");
     exit(-1);
@@ -364,7 +365,7 @@ void base_init() {
     fprintf(stderr, "Error creating PBCH object\n");
     exit(-1);
   }
-
+*/
   if (srslte_pdcch_init_enb(&pdcch, cell.nof_prb)) {
     fprintf(stderr, "Error creating PDCCH object\n");
     exit(-1);
@@ -871,7 +872,7 @@ int main(int argc, char **argv) {
         srslte_pbch_encode(&pbch, bch_payload, slot1_symbols, nf%4);
       }
 
-      srslte_pcfich_encode(&pcfich, cfi, sf_symbols, sf_idx);
+ //     srslte_pcfich_encode(&pcfich, cfi, sf_symbols, sf_idx);
 
       /* Update DL resource allocation from control port */
       if (update_control(sf_idx)) {
