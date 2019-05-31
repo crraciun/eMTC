@@ -647,7 +647,7 @@ int mac::get_dl_sched(uint32_t tti, dl_sched_t *dl_sched_res)
   dl_sched_res->nof_grants = n;
 
   // Number of CCH symbols
-  dl_sched_res->cfi = sched_result.cfi;
+  //dl_sched_res->cfi = sched_result.cfi;
 
   return SRSLTE_SUCCESS;
 }
