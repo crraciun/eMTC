@@ -51,7 +51,7 @@ const static srslte_dci_format_t ue_dci_formats[8][2] = {
 
 static srslte_dci_format_t common_formats[] = {SRSLTE_DCI_FORMAT1A,SRSLTE_DCI_FORMAT1C};
 const uint32_t nof_common_formats = 2; 
-
+const uint32_t cfi=3;
 int srslte_ue_dl_init(srslte_ue_dl_t *q,
                       cf_t *in_buffer[SRSLTE_MAX_PORTS],
                       uint32_t max_prb,
