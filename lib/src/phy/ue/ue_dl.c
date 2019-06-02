@@ -424,7 +424,7 @@ int srslte_ue_dl_decode_estimate_mbsfn(srslte_ue_dl_t *q, uint32_t sf_idx, uint3
       fprintf(stderr, "Error decoding PCFICH\n");
       return SRSLTE_ERROR;
     }
-
+*/
     INFO("Decoded CFI=%d with correlation %.2f, sf_idx=%d\n", *cfi, cfi_corr, sf_idx);
 
     return SRSLTE_SUCCESS;
@@ -432,8 +432,8 @@ int srslte_ue_dl_decode_estimate_mbsfn(srslte_ue_dl_t *q, uint32_t sf_idx, uint3
     return SRSLTE_ERROR_INVALID_INPUTS; 
   }
 }
-*/
-*cfi=3;
+
+//*cfi=3;
 int srslte_ue_dl_cfg_grant(srslte_ue_dl_t *q, srslte_ra_dl_grant_t *grant, uint32_t cfi, uint32_t sf_idx,
                                  int rvidx[SRSLTE_MAX_CODEWORDS], srslte_mimo_type_t mimo_type) {
   uint32_t pmi = 0;
