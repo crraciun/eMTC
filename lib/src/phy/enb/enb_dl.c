@@ -384,7 +384,7 @@ void srslte_enb_dl_put_base(srslte_enb_dl_t *q, uint32_t tti)
 void srslte_enb_dl_put_mbsfn_base(srslte_enb_dl_t *q, uint32_t tti) 
 {
   uint32_t sf_idx1 = tti%10;
-  srslte_enb_dl_put_pcfich(q, sf_idx1);
+//  srslte_enb_dl_put_pcfich(q, sf_idx1);
   srslte_refsignal_mbsfn_put_sf(q->cell, 0,q->csr_signal.pilots[0][sf_idx1], q->mbsfnr_signal.pilots[0][sf_idx1], q->sf_symbols[0]);
 }
 
