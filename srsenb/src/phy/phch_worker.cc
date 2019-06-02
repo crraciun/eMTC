@@ -451,7 +451,7 @@ void phch_worker::work_imp()
   
   encode_pdcch_ul(ul_grants[t_tx_ul].sched_grants, ul_grants[t_tx_ul].nof_grants);
   // Put pending PHICH HARQ ACK/NACK indications into subframe
-  encode_phich(ul_grants[t_tx_ul].phich, ul_grants[t_tx_ul].nof_phich);
+  //encode_phich(ul_grants[t_tx_ul].phich, ul_grants[t_tx_ul].nof_phich);
 
   // Prepare for receive ACK for DL grants in t_tx_dl+4
   phy->ue_db_clear(TTIMOD(TTI_TX(t_tx_dl)));
@@ -837,7 +837,7 @@ int phch_worker::decode_pucch()
 }
 
 
-int phch_worker::encode_phich(srslte_enb_dl_phich_t *acks, uint32_t nof_acks)
+/*int phch_worker::encode_phich(srslte_enb_dl_phich_t *acks, uint32_t nof_acks)
 {
   for (uint32_t i=0;i<nof_acks;i++) {
     uint16_t rnti = acks[i].rnti;
@@ -854,7 +854,7 @@ int phch_worker::encode_phich(srslte_enb_dl_phich_t *acks, uint32_t nof_acks)
     }
   }
   return SRSLTE_SUCCESS;
-}
+}*/
 
 
 int phch_worker::encode_pdcch_ul(srslte_enb_ul_pusch_t *grants, uint32_t nof_grants)
