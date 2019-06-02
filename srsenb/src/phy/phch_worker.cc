@@ -451,7 +451,7 @@ void phch_worker::work_imp()
   
   encode_pdcch_ul(ul_grants[t_tx_ul].sched_grants, ul_grants[t_tx_ul].nof_grants);
   // Put pending PHICH HARQ ACK/NACK indications into subframe
-  //encode_phich(ul_grants[t_tx_ul].phich, ul_grants[t_tx_ul].nof_phich);
+ // encode_phich(ul_grants[t_tx_ul].phich, ul_grants[t_tx_ul].nof_phich);
 
   // Prepare for receive ACK for DL grants in t_tx_dl+4
   phy->ue_db_clear(TTIMOD(TTI_TX(t_tx_dl)));

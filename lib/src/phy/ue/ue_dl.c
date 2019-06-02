@@ -51,7 +51,7 @@ const static srslte_dci_format_t ue_dci_formats[8][2] = {
 
 static srslte_dci_format_t common_formats[] = {SRSLTE_DCI_FORMAT1A,SRSLTE_DCI_FORMAT1C};
 const uint32_t nof_common_formats = 2; 
-const uint32_t cfi=3;
+//const uint32_t cfi=3;
 int srslte_ue_dl_init(srslte_ue_dl_t *q,
                       cf_t *in_buffer[SRSLTE_MAX_PORTS],
                       uint32_t max_prb,
@@ -418,7 +418,7 @@ int srslte_ue_dl_decode_estimate_mbsfn(srslte_ue_dl_t *q, uint32_t sf_idx, uint3
 
 
     /* First decode PCFICH and obtain CFI */
-/*    if (srslte_pcfich_decode_multi(&q->pcfich, q->sf_symbols_m, q->ce_m, 
+ /* if (srslte_pcfich_decode_multi(&q->pcfich, q->sf_symbols_m, q->ce_m, 
                              srslte_chest_dl_get_noise_estimate(&q->chest), 
                              sf_idx, cfi, &cfi_corr)<0) {
       fprintf(stderr, "Error decoding PCFICH\n");
@@ -428,12 +428,13 @@ int srslte_ue_dl_decode_estimate_mbsfn(srslte_ue_dl_t *q, uint32_t sf_idx, uint3
     INFO("Decoded CFI=%d with correlation %.2f, sf_idx=%d\n", *cfi, cfi_corr, sf_idx);
 
     return SRSLTE_SUCCESS;
-  } else {
+  }
+  else {
     return SRSLTE_ERROR_INVALID_INPUTS; 
   }
 }
 
-//*cfi=3;
+
 int srslte_ue_dl_cfg_grant(srslte_ue_dl_t *q, srslte_ra_dl_grant_t *grant, uint32_t cfi, uint32_t sf_idx,
                                  int rvidx[SRSLTE_MAX_CODEWORDS], srslte_mimo_type_t mimo_type) {
   uint32_t pmi = 0;
@@ -765,7 +766,7 @@ uint32_t srslte_ue_dl_get_ncce(srslte_ue_dl_t *q) {
   return q->last_location.ncce; 
 }
 
-int dci_blind_search(srslte_ue_dl_t *q, dci_blind_search_t *search_space, uint16_t rnti, uint32_t cfi, srslte_dci_msg_t *dci_msg)
+ int dci_blind_search(srslte_ue_dl_t *q, dci_blind_search_t *search_space, uint16_t rnti, uint32_t cfi, srslte_dci_msg_t *dci_msg)
 {
   int ret = SRSLTE_ERROR; 
   uint16_t crc_rem = 0; 
@@ -853,7 +854,7 @@ int srslte_ue_dl_find_dl_dci(srslte_ue_dl_t *q, uint32_t tm, uint32_t cfi, uint3
 }
 
 // Blind search for SI/P/RA-RNTI
-int find_dl_dci_type_siprarnti(srslte_ue_dl_t *q, uint32_t cfi, uint16_t rnti, srslte_dci_msg_t *dci_msg)
+ int find_dl_dci_type_siprarnti(srslte_ue_dl_t *q, uint32_t cfi, uint16_t rnti, srslte_dci_msg_t *dci_msg)
 {
   int ret = 0; 
   // Configure and run DCI blind search 
@@ -873,7 +874,7 @@ int find_dl_dci_type_siprarnti(srslte_ue_dl_t *q, uint32_t cfi, uint16_t rnti, s
 }
 
 // Blind search for C-RNTI
-int find_dl_dci_type_crnti(srslte_ue_dl_t *q, uint32_t tm, uint32_t cfi,
+ int find_dl_dci_type_crnti(srslte_ue_dl_t *q, uint32_t tm, uint32_t cfi,
                                   uint32_t sf_idx, uint16_t rnti, srslte_dci_msg_t *dci_msg) {
   int ret = SRSLTE_SUCCESS; 
   dci_blind_search_t search_space; 

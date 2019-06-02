@@ -377,7 +377,7 @@ void srslte_enb_dl_put_base(srslte_enb_dl_t *q, uint32_t tti)
   srslte_enb_dl_put_sync(q, sf_idx);
   srslte_enb_dl_put_refs(q, sf_idx);
   srslte_enb_dl_put_mib(q, tti);
- // srslte_enb_dl_put_pcfich(q, sf_idx);
+//  srslte_enb_dl_put_pcfich(q, sf_idx);
 
 }
 
