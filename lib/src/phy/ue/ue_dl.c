@@ -765,7 +765,7 @@ uint32_t srslte_ue_dl_get_ncce(srslte_ue_dl_t *q) {
   return q->last_location.ncce; 
 }
 
-static int dci_blind_search(srslte_ue_dl_t *q, dci_blind_search_t *search_space, uint16_t rnti, uint32_t cfi, srslte_dci_msg_t *dci_msg)
+int dci_blind_search(srslte_ue_dl_t *q, dci_blind_search_t *search_space, uint16_t rnti, uint32_t cfi, srslte_dci_msg_t *dci_msg)
 {
   int ret = SRSLTE_ERROR; 
   uint16_t crc_rem = 0; 
@@ -853,7 +853,7 @@ int srslte_ue_dl_find_dl_dci(srslte_ue_dl_t *q, uint32_t tm, uint32_t cfi, uint3
 }
 
 // Blind search for SI/P/RA-RNTI
-static int find_dl_dci_type_siprarnti(srslte_ue_dl_t *q, uint32_t cfi, uint16_t rnti, srslte_dci_msg_t *dci_msg)
+int find_dl_dci_type_siprarnti(srslte_ue_dl_t *q, uint32_t cfi, uint16_t rnti, srslte_dci_msg_t *dci_msg)
 {
   int ret = 0; 
   // Configure and run DCI blind search 
@@ -873,7 +873,7 @@ static int find_dl_dci_type_siprarnti(srslte_ue_dl_t *q, uint32_t cfi, uint16_t 
 }
 
 // Blind search for C-RNTI
-static int find_dl_dci_type_crnti(srslte_ue_dl_t *q, uint32_t tm, uint32_t cfi,
+int find_dl_dci_type_crnti(srslte_ue_dl_t *q, uint32_t tm, uint32_t cfi,
                                   uint32_t sf_idx, uint16_t rnti, srslte_dci_msg_t *dci_msg) {
   int ret = SRSLTE_SUCCESS; 
   dci_blind_search_t search_space; 
