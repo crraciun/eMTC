@@ -46,3 +46,6 @@ b. Line 170 and 171
 c. Lines 233 to 241
 d. Lines 421 to 435
 e. Lines 965 to 970
+
+3. The following line was added in lib/src/phy/ue/ue_dl.c at line 54
+const uint32_t cfi=3;
