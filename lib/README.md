@@ -28,6 +28,10 @@ a. Line 82 to 90 for disabling the PCFICH initialization
       }
 */
 d. Line 359 to 372
+e. Line 380 was deleted
+// srslte_enb_dl_put_pcfich(q, sf_idx);
+f. Line 387 was deleted
+//  srslte_enb_dl_put_pcfich(q, sf_idx1);
 
 2. From lib/examples/pdsch_enodeb.c was eliminated the following channel:
 PCFICH. For completing this task, the following codes were erased:
