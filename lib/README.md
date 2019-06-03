@@ -37,3 +37,12 @@ a. Line 95
 b. From line 359 to 368
 c. Line 875
  //     srslte_pcfich_encode(&pcfich, cfi, sf_symbols, sf_idx);
+
+3. From lib/src/phy/ue/ue_dl.c were deleted 
+a. Lines 110 to 122
+b. Line 170 and 171
+//    srslte_pcfich_free(&q->pcfich);
+//    srslte_phich_free(&q->phich);
+c. Lines 233 to 241
+d. Lines 421 to 435
+e. Lines 965 to 970
