@@ -8,3 +8,7 @@ The following changes were made to implement LTE-M eMTC
 2. From srsenb/src/mac/mac.cc 
 The line 650 was deleted
  //dl_sched_res->cfi = sched_result.cfi;
+
+3. From srsenb/src/mac/mac.cc
+The following line was added
+dl_sched_res->cfi=3;
