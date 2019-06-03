@@ -49,3 +49,8 @@ e. Lines 965 to 970
 
 3. The following line was added in lib/src/phy/ue/ue_dl.c at line 54
 const uint32_t cfi=3;
+
+4. Static was removed from the following functions:
+Line 768 static int dci_blind_search(..)
+Line 856 static int find_dl_dci_type_siprarnti(..)
+Line 876 static int find_dl_dci_type_crnti(..)
