@@ -19,3 +19,7 @@ The following line was added
 dl_sched_res->cfi=3;
 
 
+
+For these changes in algorithm, the following sources were followed:
+[1] https://www.sharetechnote.com/html/Handbook_LTE_BL_CE_MPDCCH.html
+[2] https://www.sharetechnote.com/html/Handbook_LTE_BL_CE.html
