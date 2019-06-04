@@ -58,3 +58,7 @@ const uint32_t cfi=3;
 Line 768 static int dci_blind_search(..)
 Line 856 static int find_dl_dci_type_siprarnti(..)
 Line 876 static int find_dl_dci_type_crnti(..)
+
+For these changes in algorithm, the following sources were followed:
+[1] https://www.sharetechnote.com/html/Handbook_LTE_BL_CE_MPDCCH.html
+[2] https://www.sharetechnote.com/html/Handbook_LTE_BL_CE.html
