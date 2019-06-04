@@ -12,6 +12,6 @@ const uint32_t cfi=3;
 
 
 
-For these changes in algorithm, the following sources were followed:
-[1] https://www.sharetechnote.com/html/Handbook_LTE_BL_CE_MPDCCH.html
+For these changes in algorithm, the following sources were followed: &nbsp;
+[1] https://www.sharetechnote.com/html/Handbook_LTE_BL_CE_MPDCCH.html &nbsp;
 [2] https://www.sharetechnote.com/html/Handbook_LTE_BL_CE.html
